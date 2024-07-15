@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BMICalculator">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:id="@+id/layout"
+        android:background="@color/buttoncolor">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/navbar_title"
+            android:layout_centerVertical="true"
+             android:textSize="16sp"
+            android:layout_marginStart="11dp"
+            android:layout_marginRight="5dp"
+            android:layout_toEndOf="@+id/ivback"
+             android:textStyle="bold"
+            android:textColor="@color/lightpurple"/>
+        <ImageView
+            android:id="@+id/ivback"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+
+            android:src="@drawable/baseline_arrow_back_24" />
+    </RelativeLayout>
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/bmicalculator"
+    android:textSize="30sp"
+        android:layout_below="@id/layout"
+    android:id="@+id/hd"
+        android:textAlignment="center"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:textColor="@color/textcolor"
+    android:textStyle="bold"/>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_below="@id/hd"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/weightEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_weight"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/heightEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_height"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/buttoncolor"
+            android:text="@string/gannakaren" />
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>
